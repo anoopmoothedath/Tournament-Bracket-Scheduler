@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tournament Scheduler</title>
+	<!--BOOTSTRAP LIBRARIES-->
+	<meta charset = "utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">		
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="Javascript/navbar-js.js"></script>
+    <script type="text/javascript" src="Javascript/collpasibletable.js"></script>
+</head>
+<body class="borderstyle">
+	<!--
+	<nav class="bg-poster">
+		<img src="Images/Icons/PMIS-Logo.png" width="50px" width="50px" class="bottomleft" style="padding-bottom: 38px;">
+		<p class="bottomleft" style="margin-left: 30px;"><strong>&nbsp;PMIS</strong></p>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+	        <span class="navbar-toggler-icon"></span>
+	    </button>
+		<div class="customnavbar">
+			<div class="bottomnav">
+				<nav class="stroke">
+					<ul class="ul-nav">
+					<li><a href="#live" style="color: red;"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> LIVE&nbsp;</a></li>
+					<li><a href="#pointstable">POINTS TABLE&nbsp;</a></li>
+					<li><a href="#schedule">SCHEDULE&nbsp;</a></li>
+					<li><a href="#about">ABOUT&nbsp;</a></li>
+				</ul>		
+				</nav>
+				
+			</div>
+		</div>		
+	</nav>-->
+	<div class="bg-poster">
+		<nav class="navbar navbar-dark navbar-expand-sm bg-dark bottomleft">
+			<img src="Images/Icons/PMIS-Logo.png" width="50px" width="50px">
+		    <a href="/" class="navbar-brand d-flex w-50 mr-auto" style="font-size: 80px;"> PMIS</a>
+		    <button type="button" class="navbar-toggler collapse" data-toggle="collapse" data-target="#collapsingNavbar3" aria-expanded="false">
+		        <span class="navbar-toggler-icon">asdasd</span>
+		    </button>
+		    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+		        <ul class="nav navbar-nav ml-auto w-100 justify-content-end" style="padding-top: 30px;">
+		            <li class="nav-item">
+		                <a class="nav-link live" href="#live"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> LIVE</a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="#pointstable">POINTS TABLE</a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="#schedule">SCHEDULE</a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="#about">ABOUT</a>
+		            </li>
+		        </ul>
+		    </div>
+		</nav>
+	</div>
+	<section id="live" style="background-image: url(Art/bg.png); background-size: cover; height: auto;">
+		<center style="padding-top: 65px; padding-right: 80px;height: 600px;">
+			<span class="soulmaze teamstext">WATCH </span><span class="soulmazeoutline teamstext"><strong>LIVE</strong></span>
+		<div class="embed-responsive embed-responsive-16by9 col-sm-8 offset-md-1">
+    		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xn4E5LyCeb8?controls=1" allowfullscreen></iframe>
+  		</div>
+  	</center>
+	</section>
+	<section id="pointstable" style="background-image: url(Art/bg.png); background-size: cover; height: auto;">
+		<div class="container" style="padding-top: 80px;">
+		  <center><span class="soulmaze teamstext">POINTS </span><span class="soulmazeoutline teamstext"><strong>TABLE</strong></span></center>
+		  <table class="table table-bordered">
+		    <tr class="header">
+		      <th colspan="4">QUALIFIERS</th>
+		    </tr>
+		    <tr>
+		      <th>Team Name</th>
+		      <th>Pos. Points</th>	
+		      <th>Kill Points</th>
+		      <th>Total Points</th>		      
+		    </tr>
+		    <tr>
+		      <td><img src="Images/Icons/TSM-Entity.png" alt="" height="20px" width="40px" usemap="#iconmap"> TSMEnitity</td>
+		      <td>297</td>
+		      <td>222</td>
+		      <td>519</td>
+		    </tr>
+		    <tr>
+		      <td><img src="Images/Icons/Orange_Rock.png" alt="" height="20px" width="25px"> Orange Rock</td>
+		      <td>319</td>
+		      <td>191</td>
+		      <td>510</td>
+		    </tr>
+		    <tr>
+		      <td><img src="Images/Icons/Synerge.png" alt="" height="25px" width="35px"> Synerge</td>
+		      <td>321</td>
+		      <td>201</td>
+		      <td>422</td>
+		    </tr>
+		    <tr class="header">
+		      <td colspan="4">PRELIMINARY</td>
+		    </tr>
+		    <tr>
+			  <th>Team Name</th>
+		      <th>Pos. Points</th>	
+		      <th>Kill Points</th>
+		      <th>Total Points</th>	
+		    </tr>
+		    <tr>
+		      <td>N.A</td>
+		      <td>N.A</td>
+		      <td>N.A</td>
+		      <td>N.A</td>
+		    </tr>
+		    <tr class="header">
+		      <td colspan="4">SEMI-FINALS</td>
+		    </tr>
+		    <tr>
+		      <th>Team Name</th>
+		      <th>Pos. Points</th>	
+		      <th>Kill Points</th>
+		      <th>Total Points</th>
+		    </tr>
+		    <tr>
+		      <td>N.A</td>
+		      <td>N.A</td>
+		      <td>N.A</td>
+		      <td>N.A</td>
+		    </tr>
+		    <tr class="header">
+		      <td colspan="4">FINALS</td>
+		    </tr>
+		    <tr>
+			  <th>Team Name</th>
+		      <th>Pos. Points</th>	
+		      <th>Kill Points</th>
+		      <th>Total Points</th>
+		    </tr>
+		    <tr>
+		      <td>N.A</td>
+		      <td>N.A</td>
+		      <td>N.A</td>
+		      <td>N.A</td>
+		    </tr>
+		  </table>
+		</div>		
+		<center>
+		<img src="Images/Icons/TSM-Entity.png" alt="" usemap="#iconmap" width="500px" height="300px;"></center>
+		<map name="iconmap">
+		    <area target="_blank" alt="TSMEnitity" title="TSMEnitity" href="https://tsm.gg/news/tsm-pubgm-announcement" coords="298,333,279" shape="circle">
+		</map>
+	</section>
+
+	<section id="schedule" style="padding-bottom: 30px; text-align: center; background-image: url(Art/bg.png); background-size: cover; height: auto;">
+		<center><span class="soulmaze teamstext">MEET THE </span><span class="soulmazeoutline teamstext"><strong>TEAMS</strong></span></center>
+		<div class="container" style="padding-top: 10px;">
+			<table class="table table-bordered teamtable">
+		    <tr class="header">
+		      <td colspan="1">TEAM A</td>
+		    </tr>
+		    <tr>
+				<td>U Mumba ESports</td>	
+		    </tr>
+		    <tr>
+		      <td>TSM Entity</td>
+		    </tr>
+		    <tr>
+		      <td>Synerge</td>
+		    </tr>
+		  </table>
+
+		  <table class="table table-bordered teamtable">
+		    <tr class="header">
+		      <td colspan="1">TEAM B</td>
+		    </tr>
+		    <tr>
+				<td>Orange Rock</td>	
+		    </tr>
+		    <tr>
+		      <td>Godlike</td>
+		    </tr>
+		    <tr>
+		      <td>Element ESports</td>
+		    </tr>
+		  </table>
+
+		  <table class="table table-bordered teamtable">
+		    <tr class="header">
+		      <td colspan="1">TEAM C</td>
+		    </tr>
+		    <tr>
+				<td>Powerhouse</td>	
+		    </tr>
+		    <tr>
+		      <td>8-Bit</td>
+		    </tr>
+		    <tr>
+		      <td>Team IND</td>
+		    </tr>
+		  </table>
+
+		  <table class="table table-bordered teamtable">
+		    <tr class="header">
+		      <td colspan="1">TEAM D</td>
+		    </tr>
+		    <tr>
+				<td>VSG Crawlers</td>	
+		    </tr>
+		    <tr>
+		      <td>Initiative ESports</td>
+		    </tr>
+		    <tr>
+		      <td>Megastars</td>
+		    </tr>
+		  </table>
+		</div>		
+	</section>
+
+	<footer class="footer" id="about">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-5">
+	                <h5><i class="fa fa-gamepad"></i> <strong>CHAMPIONS ARENA</strong></h5>
+	                <div class="row">
+	                    <div class="col-6">
+	                        <ul class="list-unstyled">
+	                            <li><a href="">Tournaments</a></li>
+	                            <li><a href=""></a></li>
+	                            <li><a href="">Partners</a></li>
+	                            <li><a href="">Team</a></li>
+	                        </ul>
+	                    </div><!--
+	                    <div class="col-6">
+	                        <ul class="list-unstyled">
+	                            <li><a href="">Documentation</a></li>
+	                            <li><a href="">Support</a></li>
+	                            <li><a href="">Legal Terms</a></li>
+	                            <li><a href="">About</a></li>
+	                        </ul>
+	                    </div>-->
+	                </div>
+	                <ul class="nav">
+	                    <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+	                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+	                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+	                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+	                </ul>
+	                <br>
+	            </div>
+	            <div class="col-md-2">
+	                <h5 class="text-md-right">Contact Us</h5>
+	                <hr>
+	            </div>
+	            <div class="col-md-5">
+	                <form>
+	                    <fieldset class="form-group">
+	                        <input type="email" class="form-control display-3" id="exampleInputEmail1" placeholder="Enter email">
+	                    </fieldset>
+	                    <fieldset class="form-group">
+	                        <textarea class="form-control display-3" id="exampleMessage" placeholder="Message"></textarea>
+	                    </fieldset>
+	                    <fieldset class="form-group text-xs-right">
+	                        <button type="button" class="btn btn-secondary-outline btn-lg display-3" style="background-color: white;">Send</button>
+	                    </fieldset>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+</body>
+</html>
