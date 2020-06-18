@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tournament Scheduler</title>
+	<!--BOOTSTRAP LIBRARIES-->
+	<meta charset = "utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">		
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="Javascript/navbar-js.js"></script>
+</head>
+<body class="borderstyle">
+	<nav class="navbar fixed-top navbar-dark navbar-expand-sm tourn-bg-nav">
+	    <a href="/" class="navbar-brand d-flex w-50 mr-auto" style="margin-left: 2.5em; font-size: 40px;">Champions Arena</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+	        <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+	        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+	            <li class="nav-item">
+	                <a class="nav-link" href="index.html#home">HOME</a>
+	            </li>
+	            <li class="nav-item">
+	                <a class="nav-link" href="index.html#tournaments">TOURNAMENTS</a>
+	            </li>
+	            <li class="nav-item">
+	                <a class="nav-link" href="#about">ABOUT US</a>
+	            </li>
+	            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        	<li class="nav-item">
+                    <a class="nav-link" href="{{ url('/login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</a>
+                </li>
+	        </ul>
+	    </div>
+	</nav>
+
+	<section>
+		<p style="text-align: center; color: white; font-size: 40px;"><span class="soulmaze"> WANT TO HOST A</span><span class="soulmazeoutline"> TOURNAMENT?</span>
+			<hr/>
+			<h6 style="text-align: center; color: #fff;">Fill the form and get Support</h6>
+		</p>
+		<div class="container">
+			<form>
+			    <div class="form-group">
+			        <label for="inputEmail">Email Address</label>
+			        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+			    </div>
+			    <div class="form-group">
+			        <label for="inputPhoneNumber">Phone Number</label>
+			        <input type="Number" class="form-control" id="inputPhoneNumber" placeholder="Phone Number">
+			    </div>
+			    <div class="form-group">
+			        <label for="inputTournamentTitle">Tournament Title</label>
+			        <input type="text" class="form-control" id="inputTournamentTitle" placeholder="Tournament Title">
+			    </div>
+			    <div class="form-group">
+			        <label for="inputPrizePool">Prize Pool</label>
+			        <input type="Number" class="form-control" id="inputPrizePool" placeholder="Prize Pool in Rs.">
+			    </div>
+			    <div class="form-group">
+			        <label for="inputTournamentDate">Tournament Date</label>
+			        <input type="text" class="form-control" id="inputTournamentDate" placeholder="Day/Month/Year">
+			        <script type="text/javascript" src="Javascript/date.js"></script>
+			    </div>
+			    <div class="form-group files">
+			    	<label for="inputFiles">Attatch Files (Posters, Banners, Team List/Player List etc.)</label>
+	                <input type="file" class="form-control" multiple="">
+              	</div>
+
+			    <div class="form-group">
+			        <label for="inputComments">Additional Comments</label>
+			        <textarea class="form-control" rows="5" id="inputComments" placeholder="Any additional comments..."></textarea>
+			    </div>
+			    <p style="text-align: center; margin-top: 60px;">
+					<a itemprop="url" href="tournament-register.html" target="_self" class="tourn-btn">
+						<span class="tourn-btn-text">REQUEST FOR APPROVAL</span>
+					</a>
+				</p>
+			</form>
+
+		</div>
+	</section>	
+
+	<footer class="footer" id="about">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-5">
+	                <h5><i class="fa fa-gamepad"></i> <strong>CHAMPIONS ARENA</strong></h5>
+	                <div class="row">
+	                    <div class="col-6">
+	                        <ul class="list-unstyled">
+	                            <li><a href="">Tournaments</a></li>
+	                            <li><a href=""></a></li>
+	                            <li><a href="">Partners</a></li>
+	                            <li><a href="">Team</a></li>
+	                        </ul>
+	                    </div><!--
+	                    <div class="col-6">
+	                        <ul class="list-unstyled">
+	                            <li><a href="">Documentation</a></li>
+	                            <li><a href="">Support</a></li>
+	                            <li><a href="">Legal Terms</a></li>
+	                            <li><a href="">About</a></li>
+	                        </ul>
+	                    </div>-->
+	                </div>
+	                <ul class="nav">
+	                    <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+	                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+	                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+	                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+	                </ul>
+	                <br>
+	            </div>
+	            <div class="col-md-2">
+	                <h5 class="text-md-right">Contact Us</h5>
+	                <hr>
+	            </div>
+	            <div class="col-md-5">
+	                <form>
+	                    <fieldset class="form-group">
+	                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+	                    </fieldset>
+	                    <fieldset class="form-group">
+	                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+	                    </fieldset>
+	                    <fieldset class="form-group text-xs-right">
+	                        <button type="button" class="btn btn-secondary-outline btn-lg" style="background-color: white;">Send</button>
+	                    </fieldset>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+
+
+</body>
+</html>
