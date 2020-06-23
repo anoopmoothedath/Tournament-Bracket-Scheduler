@@ -21,27 +21,11 @@
     <script type="text/javascript" src="Javascript/collpasibletable.js"></script>
 </head>
 <body class="borderstyle">
-	<!--
-	<nav class="bg-poster">
-		<img src="Images/Icons/PMIS-Logo.png" width="50px" width="50px" class="bottomleft" style="padding-bottom: 38px;">
-		<p class="bottomleft" style="margin-left: 30px;"><strong>&nbsp;PMIS</strong></p>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-	        <span class="navbar-toggler-icon"></span>
-	    </button>
-		<div class="customnavbar">
-			<div class="bottomnav">
-				<nav class="stroke">
-					<ul class="ul-nav">
-					<li><a href="#live" style="color: red;"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> LIVE&nbsp;</a></li>
-					<li><a href="#pointstable">POINTS TABLE&nbsp;</a></li>
-					<li><a href="#schedule">SCHEDULE&nbsp;</a></li>
-					<li><a href="#about">ABOUT&nbsp;</a></li>
-				</ul>		
-				</nav>
-				
-			</div>
-		</div>		
-	</nav>-->
+	<iframe src="Adrenaline.wav" allow="autoplay" id="audio" style="display: none"></iframe>
+	<audio autoplay loop>
+		<source src="Adrenaline.wav" type="audio/wav">
+			Your browser does not support the video tag.
+	</audio>
 	<div class="bg-poster">
 		<nav class="navbar navbar-dark navbar-expand-sm bg-poster bottomleft">
 			<img src="Images/Icons/PMIS-Logo.png" width="50px" width="50px">
@@ -54,6 +38,9 @@
 		            <li class="nav-item">
 		                <a class="nav-link live" href="#live"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> LIVE</a>
 		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="index.html#home">HOME</a>
+		            </li>	
 		            <li class="nav-item">
 		                <a class="nav-link" href="#pointstable">POINTS TABLE</a>
 		            </li>
@@ -153,11 +140,6 @@
 		    </tr>
 		  </table>
 		</div>		
-		<center>
-		<img src="Images/Icons/TSM-Entity.png" alt="" usemap="#iconmap" width="500px" height="300px;"></center>
-		<map name="iconmap">
-		    <area target="_blank" alt="TSMEnitity" title="TSMEnitity" href="https://tsm.gg/news/tsm-pubgm-announcement" coords="298,333,279" shape="circle">
-		</map>
 	</section>
 
 	<section id="schedule" style="padding-bottom: 30px; text-align: center; background-image: url(Art/bg.png); background-size: cover; height: auto;">
@@ -276,5 +258,18 @@
 	        </div>
 	    </div>
 	</footer>
+	<div class="load-wrapp">
+      <div class="load-3">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <script>
+    	$(window).on("load", function(){
+    		$(".load-wrapp").fadeOut("slow");
+    	});
+    </script>
 </body>
 </html>

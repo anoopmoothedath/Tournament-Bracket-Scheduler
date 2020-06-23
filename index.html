@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Tournament Scheduler</title>
+	<iframe src="Media/Adrenaline.wav" autoplay hidden="true"></iframe>
 	<!--BOOTSTRAP LIBRARIES-->
 	<meta charset = "utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">		
@@ -20,6 +21,11 @@
     <script type="text/javascript" src="Javascript/navbar-js.js"></script>
 </head>
 <body style="background-color: #3b3434">
+	<iframe src="Adrenaline.wav" allow="autoplay" id="audio" style="display: none"></iframe>
+	<audio autoplay loop>
+		<source src="Adrenaline.wav" type="audio/wav">
+			Your browser does not support the video tag.
+	</audio>
 	<nav class="navbar fixed-top navbar-dark navbar-expand-sm bg-dark">
 	    <a href="/" class="navbar-brand d-flex w-50 mr-auto" style="margin-left: 2.5em; font-size: 40px;">Champions Arena</a>
 	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
@@ -91,42 +97,21 @@
 	            <img class="card-img-top img-fluid" src="Images/pmis-poster-01.jpg" alt="Card image cap"></a>
 	            <div class="card-body">
 	                <h4 class="card-title">PUBGM Tournament </h4>
-	                <p class="card-text">
-	                	<ol>
-	                		<li>PUBGM Tournament</li>
-	                		<li>1,00,000 Rs cash prize</li>
-	                		<li>Live Now</li>
-	                	</ol>
-	                </p>
 	                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 	            </div>
 	        </div>
-	        <div class="card mb-4">
-	            <img class="card-img-top img-fluid" src="Art/Soccer-tournament-poster.jpg" alt="Card image cap">
+	        <div class="card mb-4"><a href="fifa20.html">
+	            <img class="card-img-top img-fluid" src="Images/FIFA20_FA19.png" alt="Card image cap"></a>
 	            <div class="card-body">
 	                <h4 class="card-title">FIFA 20</h4>
-	                <p class="card-text">
-	                	<ul>
-	                		<li>FIFA20 LAN event</li>
-	                		<li>50,000 Rs cash Prize</li>
-	                		<li>Finals LAN event will be conducted at Delhi</li>
-	                	</ul>
-	                </p>
 	                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 	            </div>
 	        </div>
 	        <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
 	        <div class="card mb-4">
-	            <img class="card-img-top img-fluid" src="Art/esl-one-championship.jpg" alt="Card image cap">
+	            <img class="card-img-top img-fluid" src="Images/cod-tourn-poster.jpg" alt="Card image cap">
 	            <div class="card-body">
-	                <h4 class="card-title">ESL</h4>
-	                <p class="card-text">
-	                	<ul>
-	                		<li>ESL ONE RIO Championship</li>
-	                		<li>Online LAN Event</li>
-	                		<li>$50,000 cash prize</li>
-	                	</ul>
-	                </p>
+	                <h4 class="card-title">Call of Duty</h4>
 	                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 	            </div>
 	        </div>
@@ -190,7 +175,19 @@
 	        </div>
 	    </div>
 	</footer>
-
+	<div class="load-wrapp">
+      <div class="load-3">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <script>
+    	$(window).on("load", function(){
+    		$(".load-wrapp").fadeOut("slow");
+    	});
+    </script>
 
 </body>
 </html>

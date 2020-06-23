@@ -20,6 +20,11 @@
     <script type="text/javascript" src="Javascript/navbar-js.js"></script>
 </head>
 <body class="borderstyle">
+	<iframe src="Adrenaline.wav" allow="autoplay" id="audio" style="display: none"></iframe>
+	<audio autoplay loop>
+		<source src="Adrenaline.wav" type="audio/wav">
+			Your browser does not support the video tag.
+	</audio>
 	<nav class="navbar fixed-top navbar-dark navbar-expand-sm tourn-bg-nav">
 	    <a href="/" class="navbar-brand d-flex w-50 mr-auto" style="margin-left: 2.5em; font-size: 40px;">Champions Arena</a>
 	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
@@ -142,7 +147,19 @@
 	        </div>
 	    </div>
 	</footer>
-
+	<div class="load-wrapp">
+      <div class="load-3">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <script>
+    	$(window).on("load", function(){
+    		$(".load-wrapp").fadeOut("slow");
+    	});
+    </script>
 
 </body>
 </html>
