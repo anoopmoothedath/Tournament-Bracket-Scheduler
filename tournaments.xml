@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tournaments [
+<!ELEMENT tournaments (title, organizer, prize, from, to)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT organizer (#PCDATA)>
+<!ELEMENT prize (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT to (#PCDATA)>
+]>
+<tournaments>
+	<tournament category="PC">
+		<title>FIFA20</title>
+		<organizer>EA Sports</organizer>
+		<prize>500000</prize>
+	</tournament>
+	<tournament category="Mobile">
+		<title>Pubg Mobile India Series</title>
+		<organizer>Tencent Games</organizer>
+		<prize>100000</prize>
+	</tournament>
+</tournaments>
