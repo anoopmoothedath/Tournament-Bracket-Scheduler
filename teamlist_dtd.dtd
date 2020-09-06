@@ -1,0 +1,3 @@
+<!ELEMENT team (name, players)>
+<!ELEMENT named (#PCDATA)>
+<!ELEMENT players (#PCDATA)>

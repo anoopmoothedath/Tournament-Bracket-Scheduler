@@ -176,6 +176,75 @@
 		</div>
 	</section>
 
+	<p style="text-align: center; color: #fff; font-size: 60px;"><span style="font-family: Soulmaze-Outline; font-style: bold;">TEAMLIST</span></p>
+	  <center style="color: white"> <table id="demo" border="5" cellpadding="5"></table> </center>
+	<script>
+		var text, parser, xmlDoc,x,i,table;
+
+		text = 
+		"<Teamlist><teams>" +
+		"<name>FCB</name>" +
+		"<country>Spain</country>" +
+		"<rating>89</rating>" +
+		"<name>Borussia Dortmund</name>" +
+		"<country>Germany</country>" +
+		"<rating>85</rating>" +
+		"<name>Bayern Munich</name>" +
+		"<country>Germany</country>" +
+		"<rating>88</rating>" +
+		"<name>Manchester City</name>" +
+		"<country>England</country>" +
+		"<rating>90</rating>" +
+		"<name>Manchester United</name>" +
+		"<country>England</country>" +
+		"<rating>84</rating>" +
+		"</teams></Teamlist>";
+
+		parser = new DOMParser();
+		xmlDoc = parser.parseFromString(text,"text/xml");
+		table = "<tr><th>Team Name</th><th>Country</th><th>Rating</th</tr>";
+		x = xmlDoc.getElementsByTagName("teams")
+		 for (i = 0; i < x.length; i++) { 
+		    table += "<tr><td>" + 
+		    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("country")[0].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("rating")[0].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    "<tr><td>" + 
+		    x[i].getElementsByTagName("name")[1].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("country")[1].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("rating")[1].childNodes[0].nodeValue +
+		    "</td><td>"+
+		    "<tr><td>" + 
+		    x[i].getElementsByTagName("name")[2].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("country")[2].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("rating")[2].childNodes[0].nodeValue +
+		    "</td><td>"+
+		    "<tr><td>" + 
+		    x[i].getElementsByTagName("name")[3].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("country")[3].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("rating")[3].childNodes[0].nodeValue +
+		    "</td><td>"+
+		     "<tr><td>" + 
+		    x[i].getElementsByTagName("name")[4].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("country")[4].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("rating")[4].childNodes[0].nodeValue +
+		    "</td><td>";
+		  }
+		  document.getElementById("demo").innerHTML = table;
+	  
+	</script>
+
 	<footer class="footer" id="about">
 	    <div class="container">
 	        <div class="row">

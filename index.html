@@ -96,15 +96,15 @@
 	    	<div class="card mb-4"><a href="pmis-2020.html">
 	            <img class="card-img-top img-fluid" src="Images/pmis-poster-01.jpg" alt="Card image cap"></a>
 	            <div class="card-body">
-	                <h4 class="card-title">PUBGM Tournament </h4>
+	                <h4 class="card-title">PMIS</h4>
 	                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 	            </div>
 	        </div>
-	        <div class="card mb-4"><a href="fifa20.html">
+	        <div class="card mb-4 f1"><a href="fifa20.html">
 	            <img class="card-img-top img-fluid" src="Images/FIFA20_FA19.png" alt="Card image cap"></a>
-	            <div class="card-body">
-	                <h4 class="card-title">FIFA 20</h4>
-	                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+	            <div class="card-body f2">
+	                <h4 class="card-title f3" id="fifa20title">FIFA 20</h4>
+					<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 	            </div>
 	        </div>
 	        <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
@@ -189,5 +189,18 @@
     	});
     </script>
 
+<script>
+	var parser, xmlDoc;
+	var text = "<tournaments><tournament category="PC">" +
+	"<title>FIFA20</title>" +
+	"<organizer>EA Sports</organizer>" +
+	"<prize>500000</prize>" +
+	"</tournament></tournaments>";
+
+	parser = new DOMParser();
+	xmlDoc = parser.parseFromString(text,"text/xml");
+
+	document.querySelector(".container .card-deck .f1 .f2 .card-title").innerHTML = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+</script>
 </body>
-</html>
+</html> 

@@ -1,0 +1,13 @@
+body {
+  margin: 10px;
+  padding: 10px;
+}
+
+form {
+  max-width: 480px;
+  margin: auto;
+}
+
+.form-group>[class*="col-"]+.ws-errorbox {
+  padding: 0 15px;
+}

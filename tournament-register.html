@@ -16,15 +16,15 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="Javascript/navbar-js.js"></script>
+	<script type="text/javascript" src="Javascript/navbar-js.js"></script>
 </head>
-<body class="borderstyle">
-	<iframe src="Adrenaline.wav" allow="autoplay" id="audio" style="display: none"></iframe>
-	<audio autoplay loop>
-		<source src="Adrenaline.wav" type="audio/wav">
-			Your browser does not support the video tag.
-	</audio>
+<body class="borderstyle" >
 	<nav class="navbar fixed-top navbar-dark navbar-expand-sm tourn-bg-nav">
 	    <a href="/" class="navbar-brand d-flex w-50 mr-auto" style="margin-left: 2.5em; font-size: 40px;">Champions Arena</a>
 	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
@@ -55,42 +55,65 @@
 			<h6 style="text-align: center; color: #fff;">Fill the form and get Support</h6>
 		</p>
 		<div class="container">
-			<form>
+			<form name = "myForm" class="needs-validation" novalidate>
 			    <div class="form-group">
 			        <label for="inputEmail">Email Address</label>
-			        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+					<input type="email" class="form-control" id="inputEmail" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+					<div class="invalid-feedback">
+						Please provide a valid email address.
+					  </div>
 			    </div>
 			    <div class="form-group">
 			        <label for="inputPhoneNumber">Phone Number</label>
-			        <input type="Number" class="form-control" id="inputPhoneNumber" placeholder="Phone Number">
+					<input type="Number" class="form-control" id="inputPhoneNumber" placeholder="Phone Number" required>
+					<div class="invalid-feedback">
+						Please provide a phone number.
+					  </div>					
 			    </div>
 			    <div class="form-group">
 			        <label for="inputTournamentTitle">Tournament Title</label>
-			        <input type="text" class="form-control" id="inputTournamentTitle" placeholder="Tournament Title">
-			    </div>
+			        <input type="text" class="form-control" id="inputTournamentTitle" placeholder="Tournament Title" required>
+					<div class="invalid-feedback">
+						Please provide a tournament title.
+					  </div>
+				</div>
 			    <div class="form-group">
 			        <label for="inputPrizePool">Prize Pool</label>
-			        <input type="Number" class="form-control" id="inputPrizePool" placeholder="Prize Pool in Rs.">
-			    </div>
+			        <input type="Number" class="form-control" id="inputPrizePool" placeholder="Prize Pool in Rs." required>
+					<div class="invalid-feedback">
+						Please provide prize money.
+					  </div>				
+				</div>
 			    <div class="form-group">
 			        <label for="inputTournamentDate">Tournament Date</label>
-			        <input type="text" class="form-control" id="inputTournamentDate" placeholder="Day/Month/Year">
+			        <input type="text" class="form-control" id="inputTournamentDate" placeholder="Day/Month/Year" required>
 			        <script type="text/javascript" src="Javascript/date.js"></script>
-			    </div>
+					<div class="invalid-feedback">
+						Please provide a date.
+					  </div>				
+				</div>
 			    <div class="form-group files">
 			    	<label for="inputFiles">Attatch Files (Posters, Banners, Team List/Player List etc.)</label>
-	                <input type="file" class="form-control" multiple="">
-              	</div>
+	                <input type="file" class="form-control" multiple="" required>
+					<div class="invalid-feedback">
+						Please upload files.
+					  </div>				  
+				</div>
 
 			    <div class="form-group">
 			        <label for="inputComments">Additional Comments</label>
 			        <textarea class="form-control" rows="5" id="inputComments" placeholder="Any additional comments..."></textarea>
-			    </div>
+				
+				</div>
+				<!--
 			    <p style="text-align: center; margin-top: 60px;">
-					<a itemprop="url" href="tournament-register.html" target="_self" class="tourn-btn">
+					<a itemprop="url" target="_self" class="tourn-btn" type="submit">
 						<span class="tourn-btn-text">REQUEST FOR APPROVAL</span>
 					</a>
-				</p>
+				</p>-->
+				<center>
+				<button class="btn btn-outline-danger btn-lg" type="submit"><span style="color: white;">Submit form</span></button>
+				</center>	
 			</form>
 
 		</div>
@@ -147,6 +170,7 @@
 	        </div>
 	    </div>
 	</footer>
+	<!--
 	<div class="load-wrapp">
       <div class="load-3">
         <div class="line"></div>
@@ -154,12 +178,46 @@
         <div class="line"></div>
         <div class="line"></div>
       </div>
-    </div>
+	</div>
     <script>
     	$(window).on("load", function(){
     		$(".load-wrapp").fadeOut("slow");
     	});
-    </script>
+	</script>
+	<script>
+		function validateForm() {
+		  var x = document.forms["myForm"]["inputEmail"].value;
+		  var y = document.forms["myForm"]["inputPhoneNumber"].value;
+		  if (x == "") {
+			alert("Email must be filled out");
+			return false;
+		  }
+		  if (y == "") {
+			alert("Phone number must be filled out");
+			return false;
+		  }
+		}
+	</script>-->
 
+	<script>
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+	  'use strict';
+	  window.addEventListener('load', function() {
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.getElementsByClassName('needs-validation');
+		// Loop over them and prevent submission
+		var validation = Array.prototype.filter.call(forms, function(form) {
+		  form.addEventListener('submit', function(event) {
+			if (form.checkValidity() === false) {
+			  event.preventDefault();
+			  event.stopPropagation();
+			}
+			form.classList.add('was-validated');
+		  }, false);
+		});
+	  }, false);
+	})();
+	</script>
 </body>
 </html>

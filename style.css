@@ -314,6 +314,7 @@ footer .form-control {
 .tourn-btn-text{
   font-family: SlateForOnePlus-Medium;
   font-size: 15px;
+  color: white;
 }
 
 .form-group{
@@ -424,7 +425,7 @@ box-shadow: 0 3px 10px #ff0e1f;
   animation: loadingC 0.6s 0.4s linear infinite;
 }
 @keyframes loadingC {
-  0 {
+  0% {
     transform: translate(0, 0);
   }
   50% {
@@ -433,4 +434,9 @@ box-shadow: 0 3px 10px #ff0e1f;
   100% {
     transform: translate(0, 0);
   }
+}
+
+
+.form-group>[class*="col-"]+.ws-errorbox {
+  padding: 0 15px;
 }

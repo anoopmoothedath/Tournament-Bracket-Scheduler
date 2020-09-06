@@ -144,7 +144,7 @@
 
 	<section id="schedule" style="padding-bottom: 30px; text-align: center; background-image: url(Art/bg.png); background-size: cover; height: auto;">
 		<center><span class="soulmaze teamstext">MEET THE </span><span class="soulmazeoutline teamstext"><strong>TEAMS</strong></span></center>
-		<div class="container" style="padding-top: 10px;">
+		<!--<div class="container" style="padding-top: 10px;">
 			<table class="table table-bordered teamtable">
 		    <tr class="header">
 		      <td colspan="1">TEAM A</td>
@@ -204,7 +204,41 @@
 		      <td>Megastars</td>
 		    </tr>
 		  </table>
-		</div>		
+		</div>-->
+
+		<p><button onclick="loadXMLDoc()">Get CD info</button></p>
+
+		<table id="demo" border="1">
+		<tr><th>Team Name</th><th>No. of Players</th></tr>
+		</table>
+
+		<script>
+		function loadXMLDoc() {
+		  var xmlhttp = new XMLHttpRequest();
+		  xmlhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		      myFunction(this);
+		    }
+		  };
+		  xmlhttp.open("GET", "teamlist.xml" , true);
+		  xmlhttp.send();
+		}
+
+		function myFunction(xml) {
+		  var x, i, xmlDoc, table;
+		  xmlDoc = xml.responseXML;
+		  table = "<tr><th>Team Name</th><th>No. of Players</th></tr>";
+		  x = xmlDoc.getElementsByTagName("tournaments")
+		  for (i = 0; i < x.length; i++) { 
+		    table += "<tr><td>" + 
+		    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+		    "</td><td>" +
+		    x[i].getElementsByTagName("players")[0].childNodes[0].nodeValue +
+		    "</td></tr>";
+		  }
+		  document.getElementById("demo").innerHTML = table;
+		}
+		</script>		
 	</section>
 
 	<footer class="footer" id="about">

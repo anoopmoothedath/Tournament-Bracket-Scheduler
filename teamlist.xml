@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE teamlist SYSTEM "teamlist_dtd.dtd">
+<teamlist>
+	<team tournament="PMIS">
+		<name>TSM-Entity</name>
+		<players>four</players>
+	</team>
+	<team tournament="PMIS">
+		<name>NovaGodlike</name>
+		<players>six</players>
+	</team>	
+	<team tournament="PMIS">
+		<name>Synerge</name>
+		<players>six</players>
+	</team>	
+	<team tournament="PMIS">
+		<name>Orange Rock</name>
+		<players>six</players>
+	</team>
+	<team tournament="PMIS">
+		<name>Megastars</name>
+		<players>six</players>
+	</team>		
+</teamlist>
