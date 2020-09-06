@@ -1,0 +1,33 @@
+{ 
+"tounraments": {
+		"tournamentList": [
+            {
+			"tournament": {
+				"title": "FIFA20",
+				"organizer": "EA Sports",
+				"shortDescription": "<p>Online 1v1 Fifa 20 tournament</p>",
+				"category": "PC"
+			},
+			"teams": 32,
+			"prizepool": "1,00,000 Rs"
+		}, {
+			"tournament": {
+				"title": "PMIS 2020",
+				"organizer": "Tencent Games",
+				"shortDescription": "<p>Battle against the best teams in India. Register now for Pubg Mobile India Series 2020.</p>",
+				"category": "Mobile"
+			},
+			"teams": 320,
+			"prizepool": "1,00,000 Rs"
+		}, {
+			"tournament": {
+				"title": "Call of Duty",
+				"organizer": "Activision",
+				"shortDescription": "<p>Grab your teammates, battle it out.</p>",
+				"category": "PC"
+			},
+			"teams": 16,
+			"prizepool": "50,000 Rs"
+		}]
+	}
+}
